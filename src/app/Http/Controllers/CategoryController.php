@@ -7,8 +7,9 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function option(){
-        $items = category::all();
-        return view('index', compact('items'));
+    public function getOptions()
+    {
+        $table = Category::pluck('content','id');
+        return view('index', compact('table'));
     }
 }

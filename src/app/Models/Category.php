@@ -16,4 +16,5 @@ class Category extends Model
     public static $rules = array(
         'author_id' => 'required',
     );
+
 }

@@ -118,8 +118,8 @@
           <div class="form__group-content">
             <div class="form__input--text">
             <select name="category_item">
-              @foreach [$items as &item]
-              <option value="{{ $item->content() }}" ></option>
+              @foreach($table as $id=>$content)
+              <option value="{{ $id }}">{{ $content }}</option>
               @endforeach
             </select>
             </div>
