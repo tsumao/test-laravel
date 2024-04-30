@@ -48,7 +48,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="radio" name="gender" placeholder="" />
+              <input type="text" name="gender" placeholder="" />
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
@@ -117,7 +117,11 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <input type="email" name="email" placeholder="test@example.com" />
+            <select name="category_item">
+              @foreach [$items as &item]
+              <option value="{{ $item->content() }}" ></option>
+              @endforeach
+            </select>
             </div>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
