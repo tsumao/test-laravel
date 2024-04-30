@@ -40,7 +40,7 @@
 
 .form__label--required {
     margin-left: 5px;
-    padding: 4px 6px;
+    padding: 4% 6px;
     border-radius: 3px;
     color: red;
 }
@@ -50,6 +50,15 @@
     color: #ff0000;
     text-align: left;
 }
+
+.form__input--nametext input{
+        padding: 10px;
+        width: 280px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        background-color: #ddd;
+        appearance: none;
+    }
 
 .form__input--text input,
 .form__input--textarea textarea {
