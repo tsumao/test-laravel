@@ -27,3 +27,5 @@ Route::post('/thanks', [ContactController::class,'store']
 Route::get('/', [CategoryController::class,'getOptions']
 );
 
+
+

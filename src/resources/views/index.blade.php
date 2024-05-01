@@ -47,9 +47,12 @@
             <span class="form__label--required">※</span>
           </div>
           <div class="form__group-content">
-            <div class="form__input--text">
-              <input type="text" name="gender" placeholder="" />
-            </div>
+              <input type="radio" name="gender" value="男性" id="male"checked>
+              <label for="male">男性</label>
+              <input type="radio" name="gender" value="女性" id="female">
+              <label for="female">女性</label>
+              <input type="radio" name="gender" value="その他" id="other">
+              <label for="other">その他</label>
             <div class="form__error">
               <!--バリデーション機能を実装したら記述します。-->
             </div>
@@ -117,9 +120,10 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-            <select name="category_item">
+            <select name="category_id">
+              <option value="">選択してください</option>
               @foreach($table as $id=>$content)
-              <option value="{{ $id }}">{{ $content }}</option>
+              <option value="{{ $id=>$cateogry_id }}">{{ $content }}</option>
               @endforeach
             </select>
             </div>
@@ -140,7 +144,7 @@
           </div>
         </div>
         <div class="form__button">
-          <button class="form__button-submit" type="submit">送信</button>
+          <button class="form__button-submit" type="submit">確認画面</button>
         </div>
       </form>
     </div>

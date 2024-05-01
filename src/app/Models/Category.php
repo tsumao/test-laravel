@@ -14,7 +14,7 @@ class Category extends Model
 
     protected $guarded = array('id');
     public static $rules = array(
-        'author_id' => 'required',
+        'category_id' => 'required',
     );
 
 }

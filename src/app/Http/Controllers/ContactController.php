@@ -14,13 +14,13 @@ class ContactController extends Controller
 
     public function confirm(Request $request)
      {
-        $contact=$request->only(['first_name','last_name','gender','email','tel','address','building','detail']);
+        $contact=$request->only(['first_name','last_name','gender','email','tel','address','building','category_id','detail']);
         return view('confirm', compact('contact'));
      }
 
      public function store(Request $request)
     {
-        $contact=$request->only(['first_name','last_name','gender','email','tel','address','building','detail']);
+        $contact=$request->only(['first_name','last_name','gender','email','tel','address','building','category_id','detail']);
         Contact::create($contact);
         return view('thanks');
     }
