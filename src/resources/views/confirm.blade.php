@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Form</title>
+  <title>FationablyLate</title>
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 </head>
@@ -14,7 +14,7 @@
   <header class="header">
     <div class="header__inner">
       <a class="header__logo" href="/">
-        Contact Form
+        FationablyLate
       </a>
     </div>
   </header>
@@ -31,8 +31,9 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お名前</th>
               <td class="confirm-table__text">
-                  <input type="text" name="first_name" value="{{ $contact['first_name']}}"readonly/>
-                  <input type="text" name="last_name" value="{{$contact['last_name'] }}"readonly/>
+                  <input type="text" name="first_name" value="{{ $contact['first_name']}}"  style="display: none;"readonly/>
+                  <input type="text" name="last_name" value="{{$contact['last_name'] }}" style="display: none;"readonly/>
+                  {{ $contact['first_name']}}　{{$contact['last_name'] }}
               </td>
             </tr>
             <tr class="confirm-table__row">
@@ -40,11 +41,11 @@
               <td class="confirm-table__text">
                 <input type="text" name="category_id"  value="{{$contact['category_id']}}" style="display: none;"readonly/>
                 @if($contact['category_id']==1)
-                <p>男性</p>
+                <span>男性</span>
                 @elseif($contact['category_id']==2)
-                <p>女性</p>
+                <span>女性</span>
                 @elseif($contact['category_id']==3)
-                <p>その他</p>
+                <span>その他</span>
                 @endif   
               </td>
             </tr>
@@ -57,7 +58,7 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">電話番号</th>
               <td class="confirm-table__text">
-                <input type="tel" name="tel" value="{{ $contact['tel'] }}"readonly/>
+                <input type="tel" name="tel" value="{{ $contact['tel_pre']}}{{$contact['tel_mid']}}{{$contact['tel_pos'] }}"readonly/>
               </td>
             </tr>
             <tr class="confirm-table__row">
