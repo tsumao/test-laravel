@@ -58,6 +58,14 @@
     border: none;
 }
 
+.confirm-table__text p {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding:0
+}
+
+
 .confirm-table__row:last-child .confirm-table__header,
 .confirm-table__row:last-child .confirm-table__text {
     border-bottom-width: 0;

@@ -10,6 +10,7 @@ class CategoryController extends Controller
     public function getOptions()
     {
         $table = Category::pluck('content','id');
-        return view('index', compact('table'));
+        return view('index', compact('table'));        
     }
-}
+
+   }
