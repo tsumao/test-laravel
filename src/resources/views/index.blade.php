@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
+@extends('layouts.app')
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FationablyLate</title>
-  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+@section('css')
   <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
-</head>
+@endsection
 
-<body>
-  <header class="header">
-    <div class="header__inner">
-      <a class="header__logo" href="/">
-        FationablyLate
-      </a>
-    </div>
-  </header>
 
-  <main>
+  
+@section('content')
     <div class="contact-form__content">
       <div class="contact-form__heading">
         <h2>Contact</h2>
@@ -172,7 +159,4 @@
         </div>
       </form>
     </div>
-  </main>
-</body>
-
-</html>
+@endsection
